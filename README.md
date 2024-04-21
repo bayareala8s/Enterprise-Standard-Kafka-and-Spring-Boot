@@ -57,6 +57,38 @@ dependencies {
 Please replace `'mysql:mysql-connector-java'` with the driver of your choice if you are not using MySQL. Also, remember to add the necessary configuration for these dependencies in your `application.properties` or `application.yml` file.
 
 
+To build and run your Spring Boot application using Gradle, you can follow these steps:
+
+1. Open a terminal in your project's root directory (where the `build.gradle` file is located).
+
+2. To build the project, run the following command:
+```bash
+./gradlew build
+```
+This command compiles your code, runs any tests, and packages your code into a JAR file.
+
+3. To run the application, use the following command:
+```bash
+./gradlew bootRun
+```
+This command starts your Spring Boot application.
+
+Please note that you need to have Gradle installed and properly configured on your system to run these commands. If you're using IntelliJ IDEA, it usually comes with a bundled Gradle version that you can use.
+
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name?useSSL=false&serverTimezone=UTC
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+Replace your_database_name, your_username, and your_password with your actual database name, username, and password respectively.  The useSSL=false option is used to disable SSL as it's not usually needed for local development. The serverTimezone=UTC option is used to avoid timezone related issues.  The spring.datasource.driver-class-name property is set to com.mysql.cj.jdbc.Driver which is the driver class for MySQL.  Please note that you need to have the MySQL JDBC driver in your project dependencies. If you're using Gradle, you can add it to your build.gradle file like this:
+
+dependencies {
+    implementation 'mysql:mysql-connector-java'
+}
+
+After making these changes, run ./gradlew build to rebuild your project.
+
+
 # Enterprise-Standard-Kafka-and-Spring-Boot
 Complete code related to Kafka using Spring Boot.
 

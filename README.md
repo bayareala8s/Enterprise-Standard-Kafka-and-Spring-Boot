@@ -89,9 +89,6 @@ dependencies {
 After making these changes, run ./gradlew build to rebuild your project.
 
 
-# Enterprise-Standard-Kafka-and-Spring-Boot
-Complete code related to Kafka using Spring Boot.
-
 The `application.properties` file should be placed in the `src/main/resources` directory of your project. If the directory does not exist, you should create it. 
 
 Here is the directory structure:
@@ -302,6 +299,9 @@ Replace `8080` with the port your application is running on if it's different. T
 This indicates that your application is running and healthy. If there are any issues with your application, the status will be `DOWN` and additional details about the issue will be provided.
 
 
+
+# Enterprise-Standard-Kafka-and-Spring-Boot
+Complete code related to Kafka using Spring Boot.
 
 ## H2 Database
 

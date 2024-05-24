@@ -5,8 +5,6 @@ CREATE TABLE category (
     category_groupname VARCHAR(255) NOT NULL
 );
 
-insert into
-
 insert into category (category_id, category_name, category_groupname) VALUES
 (1, 'Electronics', 'Technology'),
 (2, 'Laptops', 'Technology'),
